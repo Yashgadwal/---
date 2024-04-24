@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>श्रद्धा भदौरिया</title>
+    <style>
+        /* Style for image container */
+        .image-container {
+            text-align: center;
+            /* margin-top: 20px; */
+            margin-top: 15rem;
+
+        }
+
+        /* Style for image */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body style="background-color: black;">
+
+
+    <!-- Image container -->
+    <div class="image-container">
+        <!-- Initially, display the default image -->
+        <img style="height: 10rem;" id="display-image" src="144p.jpg" alt="Image">
+    </div>
+
+    <div class="center" style="text-align: center;
+    display: block;
+    margin-top: 2rem;">
+
+
+        <form>
+            <!-- Dropdown for image selection -->
+            <label for="image-select"></label>
+            <select id="image-select" onchange="changeImage(this.value)" style="font-size: 2rem;">
+                <option value="144p.jpg">144p</option>
+                <option value="240p.jpg">240p</option>
+                <option value="480p.jpg">480p</option>
+                <option value="720p.png">720p</option>
+                <option value="main.png">1080p</option>
+            </select>
+        </form>
+    </div>
+
+    <script>
+        // Function to change the displayed image
+        function changeImage(imageName) {
+            // Get the image element
+            var image = document.getElementById("display-image");
+            // Update the image source
+            image.src = imageName;
+        }
+    </script>
+</body>
+
+</html>
